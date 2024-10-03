@@ -11,16 +11,14 @@ public class Pilha<T> {
         }
     }
 
-    private Node top; // topo da pilha
+    private Node top;
 
-    // adiciona um elemento
     public void push(T data) {
         Node newNode = new Node(data);
         newNode.next = top;
         top = newNode;
     }
 
-    // remove e retorna o elemento do topo
     public T pop() {
         if (isEmpty()) {
             throw new RuntimeException("Pilha está vazia");

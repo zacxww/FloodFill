@@ -13,7 +13,6 @@ public class Fila<T> {
 
     private Node comeco, fim;
 
-    // adiciona um elemento ao final da fila
     public void enqueue(T data) {
         Node newNode = new Node(data);
         if (fim == null) {
@@ -24,7 +23,6 @@ public class Fila<T> {
         }
     }
 
-    // remove e retorna o elemento do início da fila
     public T dequeue() {
         if (isEmpty()) {
             throw new RuntimeException("Fila está vazia");
